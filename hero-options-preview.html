@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Hero Visual — 4 Options Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink:"#0A2540", paper:"#FBF8F2", cream:"#F2EAD8", line:"#E6DDC9",
+          primary:"#0E5B89", coral:"#E36C56", muted:"#6E7785"
+        },
+        fontFamily: {
+          display:['Fraunces','Georgia','serif'],
+          sans:['Manrope','system-ui','sans-serif']
+        }
+      }
+    }
+  };
+</script>
+<style>
+  body{ background:#FBF8F2; color:#0A2540; font-family:'Manrope',system-ui,sans-serif; letter-spacing:-0.01em; }
+  .font-display{ font-family:'Fraunces',Georgia,serif; letter-spacing:-0.035em; }
+  .halo{
+    background:
+      radial-gradient(60% 50% at 50% 38%, rgba(14,91,137,.20) 0%, rgba(14,91,137,0) 70%),
+      radial-gradient(40% 35% at 70% 70%, rgba(227,108,86,.20) 0%, rgba(227,108,86,0) 70%);
+  }
+  .shadow-pop{
+    box-shadow:
+      0 6px 14px -8px rgba(10,37,64,.10),
+      0 24px 60px -24px rgba(10,37,64,.30);
+  }
+  .shadow-card-coral{
+    box-shadow:
+      0 1px 0 rgba(227,108,86,.06),
+      0 18px 40px -22px rgba(227,108,86,.35),
+      0 30px 60px -30px rgba(10,37,64,.25);
+  }
+  .pick-label{
+    font-family:'Manrope',sans-serif; font-size:11px; letter-spacing:.18em; text-transform:uppercase;
+    color:#6E7785;
+  }
+  .pick-name{ font-family:'Fraunces',serif; font-size:24px; line-height:1.05; color:#0A2540; }
+</style>
+</head>
+<body class="py-14">
+
+<div class="max-w-[1400px] mx-auto px-6">
+  <header class="mb-10 text-center">
+    <p class="pick-label">Compare &amp; choose</p>
+    <h1 class="font-display text-[40px] mt-2">Hero visual — 4 options</h1>
+    <p class="mt-3 text-[14px] text-muted max-w-[640px] mx-auto">
+      Each option is rendered in the same frame the live hero uses. The floating doctor-name card
+      (the one you flagged) has been removed in every preview. Pick A / B / C / D.
+    </p>
+  </header>
+
+  <!-- 4-up grid -->
+  <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-10">
+
+    <!-- =================== OPTION A — Surgical photo =================== -->
+    <figure>
+      <div class="relative aspect-[4/5] max-w-[360px] mx-auto">
+        <div class="absolute inset-0 halo rounded-[40%/30%]"></div>
+        <div class="relative h-full rounded-[220px_220px_28px_28px] overflow-hidden shadow-pop bg-cream">
+          <img class="w-full h-full object-cover"
+               src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?q=80&w=900&auto=format&fit=crop"
+               alt="Surgical team in operating theatre" />
+        </div>
+
+        <!-- floating stat (kept) -->
+        <div class="absolute -right-3 bottom-10 bg-ink text-paper rounded-2xl p-3 pr-4 shadow-card-coral flex items-center gap-2 max-w-[210px]">
+          <svg width="28" height="28" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="text-coral">
+            <path d="M24 6c-8 6-12 12-12 18a12 12 0 0 0 24 0c0-6-4-12-12-18Z"/>
+            <path d="M24 22v8"/><path d="M20 26h8"/>
+          </svg>
+          <div class="leading-tight">
+            <div class="font-display text-[18px]">24×7</div>
+            <div class="text-[9.5px] uppercase tracking-[.18em] text-paper/70">Emergency · ICU</div>
+          </div>
+        </div>
+
+        <!-- ribbon caption (kept) -->
+        <div class="absolute -bottom-5 left-4 right-4 bg-coral text-paper text-[10px] uppercase tracking-[.22em] text-center py-2 rounded-full shadow-card-coral">
+          Centre of Excellence · GI Surgery
+        </div>
+      </div>
+      <figcaption class="text-center mt-10">
+        <p class="pick-label">Option A</p>
+        <p class="pick-name mt-1">Surgical / clinical photo</p>
+        <p class="text-[12.5px] text-muted mt-2 max-w-[300px] mx-auto">
+          Real photograph of surgeons in an operating theatre. Clearest "this is a real hospital" signal.
+        </p>
+      </figcaption>
+    </figure>
+
+    <!-- =================== OPTION B — Doctor portrait =================== -->
+    <figure>
+      <div class="relative aspect-[4/5] max-w-[360px] mx-auto">
+        <div class="absolute inset-0 halo rounded-[40%/30%]"></div>
+        <div class="relative h-full rounded-[220px_220px_28px_28px] overflow-hidden shadow-pop bg-cream">
+          <img class="w-full h-full object-cover"
+               src="https://images.unsplash.com/photo-1612531386530-97286d97c2d2?q=80&w=900&auto=format&fit=crop"
+               alt="Senior doctor portrait" />
+        </div>
+        <div class="absolute -right-3 bottom-10 bg-ink text-paper rounded-2xl p-3 pr-4 shadow-card-coral flex items-center gap-2 max-w-[210px]">
+          <svg width="28" height="28" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="text-coral">
+            <path d="M24 6c-8 6-12 12-12 18a12 12 0 0 0 24 0c0-6-4-12-12-18Z"/>
+            <path d="M24 22v8"/><path d="M20 26h8"/>
+          </svg>
+          <div class="leading-tight">
+            <div class="font-display text-[18px]">24×7</div>
+            <div class="text-[9.5px] uppercase tracking-[.18em] text-paper/70">Emergency · ICU</div>
+          </div>
+        </div>
+        <div class="absolute -bottom-5 left-4 right-4 bg-coral text-paper text-[10px] uppercase tracking-[.22em] text-center py-2 rounded-full shadow-card-coral">
+          Centre of Excellence · GI Surgery
+        </div>
+      </div>
+      <figcaption class="text-center mt-10">
+        <p class="pick-label">Option B</p>
+        <p class="pick-name mt-1">Doctor portrait</p>
+        <p class="text-[12.5px] text-muted mt-2 max-w-[300px] mx-auto">
+          Editorial portrait. Most personal — but the Doctors section already shows Dr. Durai later.
+        </p>
+      </figcaption>
+    </figure>
+
+    <!-- =================== OPTION C — Cleaner illustration =================== -->
+    <figure>
+      <div class="relative aspect-[4/5] max-w-[360px] mx-auto">
+        <div class="absolute inset-0 halo rounded-[40%/30%]"></div>
+        <div class="relative h-full rounded-[220px_220px_28px_28px] overflow-hidden shadow-pop bg-cream">
+          <!-- backdrop -->
+          <div class="absolute inset-0" style="background:
+              radial-gradient(60% 55% at 50% 36%, rgba(14,91,137,.18) 0%, rgba(14,91,137,0) 65%),
+              radial-gradient(45% 40% at 70% 78%, rgba(227,108,86,.20) 0%, rgba(227,108,86,0) 70%),
+              linear-gradient(180deg, #F2EAD8 0%, #FBF8F2 100%);"></div>
+
+          <!-- Cleaner medical-precision illustration -->
+          <div class="absolute inset-0 grid place-items-center">
+            <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" class="w-[78%] h-auto" aria-label="Stethoscope and heartbeat illustration">
+              <!-- soft halos -->
+              <circle cx="200" cy="260" r="150" fill="#0E5B89" opacity=".14"/>
+              <circle cx="200" cy="260" r="90"  fill="#E36C56" opacity=".10"/>
+              <!-- decorative orbits -->
+              <g stroke="#0A2540" fill="none" opacity=".25">
+                <circle cx="200" cy="260" r="200" stroke-width=".7" stroke-dasharray="2 7"/>
+                <circle cx="200" cy="260" r="160" stroke-width=".7"/>
+              </g>
+
+              <!-- Stethoscope tubing -->
+              <g fill="none" stroke="#0A2540" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M120,90 C120,180 130,240 170,260"/>
+                <path d="M280,90 C280,180 270,240 230,260"/>
+              </g>
+              <!-- Earpieces -->
+              <circle cx="120" cy="84" r="10" fill="#0A2540"/>
+              <circle cx="280" cy="84" r="10" fill="#0A2540"/>
+
+              <!-- Y-junction & tubing down -->
+              <path d="M170,260 C190,272 210,272 230,260
+                       C220,300 210,330 200,360" fill="none" stroke="#0A2540" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+              <!-- Bell / chestpiece -->
+              <circle cx="200" cy="376" r="34" fill="#FBF8F2" stroke="#0A2540" stroke-width="6"/>
+              <circle cx="200" cy="376" r="20" fill="#E36C56" opacity=".85"/>
+
+              <!-- Heartbeat line -->
+              <g stroke="#E36C56" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M60,200 L130,200 L150,170 L175,235 L200,180 L225,215 L250,200 L340,200"/>
+              </g>
+
+              <!-- Precision crosshair -->
+              <g stroke="#0A2540" stroke-width="1.2" opacity=".45" fill="none">
+                <circle cx="320" cy="130" r="10"/>
+                <path d="M320,116 v-6 M320,144 v6 M306,130 h-6 M334,130 h6"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div class="absolute -right-3 bottom-10 bg-ink text-paper rounded-2xl p-3 pr-4 shadow-card-coral flex items-center gap-2 max-w-[210px]">
+          <svg width="28" height="28" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="text-coral">
+            <path d="M24 6c-8 6-12 12-12 18a12 12 0 0 0 24 0c0-6-4-12-12-18Z"/>
+            <path d="M24 22v8"/><path d="M20 26h8"/>
+          </svg>
+          <div class="leading-tight">
+            <div class="font-display text-[18px]">24×7</div>
+            <div class="text-[9.5px] uppercase tracking-[.18em] text-paper/70">Emergency · ICU</div>
+          </div>
+        </div>
+        <div class="absolute -bottom-5 left-4 right-4 bg-coral text-paper text-[10px] uppercase tracking-[.22em] text-center py-2 rounded-full shadow-card-coral">
+          Centre of Excellence · GI Surgery
+        </div>
+      </div>
+      <figcaption class="text-center mt-10">
+        <p class="pick-label">Option C</p>
+        <p class="pick-name mt-1">Cleaner illustration</p>
+        <p class="text-[12.5px] text-muted mt-2 max-w-[300px] mx-auto">
+          Stethoscope + heartbeat motif. Same illustrated style as the original, but reads clearly at a glance.
+        </p>
+      </figcaption>
+    </figure>
+
+    <!-- =================== OPTION D — Hospital interior =================== -->
+    <figure>
+      <div class="relative aspect-[4/5] max-w-[360px] mx-auto">
+        <div class="absolute inset-0 halo rounded-[40%/30%]"></div>
+        <div class="relative h-full rounded-[220px_220px_28px_28px] overflow-hidden shadow-pop bg-cream">
+          <img class="w-full h-full object-cover"
+               src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=900&auto=format&fit=crop"
+               alt="Modern hospital interior" />
+        </div>
+        <div class="absolute -right-3 bottom-10 bg-ink text-paper rounded-2xl p-3 pr-4 shadow-card-coral flex items-center gap-2 max-w-[210px]">
+          <svg width="28" height="28" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="text-coral">
+            <path d="M24 6c-8 6-12 12-12 18a12 12 0 0 0 24 0c0-6-4-12-12-18Z"/>
+            <path d="M24 22v8"/><path d="M20 26h8"/>
+          </svg>
+          <div class="leading-tight">
+            <div class="font-display text-[18px]">24×7</div>
+            <div class="text-[9.5px] uppercase tracking-[.18em] text-paper/70">Emergency · ICU</div>
+          </div>
+        </div>
+        <div class="absolute -bottom-5 left-4 right-4 bg-coral text-paper text-[10px] uppercase tracking-[.22em] text-center py-2 rounded-full shadow-card-coral">
+          Centre of Excellence · GI Surgery
+        </div>
+      </div>
+      <figcaption class="text-center mt-10">
+        <p class="pick-label">Option D</p>
+        <p class="pick-name mt-1">Hospital interior</p>
+        <p class="text-[12.5px] text-muted mt-2 max-w-[300px] mx-auto">
+          Calm, modern hospital scene. Conveys "centre of excellence" without focusing on a single person.
+        </p>
+      </figcaption>
+    </figure>
+
+  </div>
+
+  <footer class="mt-20 text-center text-[12.5px] text-muted">
+    Tell me <strong>A</strong>, <strong>B</strong>, <strong>C</strong>, or <strong>D</strong> and I'll wire it into <code>index.html</code> and remove the floating doctor-name card.
+  </footer>
+</div>
+
+</body>
+</html>

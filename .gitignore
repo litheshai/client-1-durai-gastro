@@ -1,0 +1,15 @@
+# Claude Code local settings (may contain tokens / personal config)
+.claude/
+
+# Working scratch — not part of the site
+temporary screenshots/
+_preview_images/
+inspirational website.png
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+.vscode/
+.idea/
